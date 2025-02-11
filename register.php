@@ -63,7 +63,3 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 }
 $con->close();
 ?>
-
-Her skal det sende informasjon om brukerens sin quiz inn i databasen for at brukeren kan beholde og vise til det andre.
-
-Jeg har laget en javascript fil for nettsiden.
