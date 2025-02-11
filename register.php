@@ -1,9 +1,4 @@
 <?php
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'william';
-$DATABASE_PASS = 'Borett!06';
-$DATABASE_NAME = 'websiteregister';
-
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
     exit('Failed to connect to the MySQL: ' . mysqli_connect_error());
