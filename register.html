@@ -10,9 +10,24 @@
     <div class="register">
         <h1>Register</h1>
         <form action="register.php" method="post" autocomplete="off">
-            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="email">Email:</label>
+            <input type="text" name="username" placeholder="Username" id="username" required> 
+
+            <labe for="password">Password:</label>
             <input type="text" name="password" placeholder="Password" id="password" required>
+
+            <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Email" id="email" required>
+
+            <label for="day">Day:</label>
+            <input type="number" name="day" placeholder="Day" id="day" required>
+
+            <label for="month">Month:</label>
+            <input type="number" name="month" placeholder="Month" id="month" required>
+
+            <label for="year">Year:</label>
+            <input type="number" name="year" placeholder="Year" id="year" required>
+
 			<input type="submit" value="Register">
         </form>
     </div>
