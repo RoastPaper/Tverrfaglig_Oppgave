@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: color-mix(in oklab, blue 75%, gray);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .header {
     text-align: center;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
 .explain {
@@ -16,6 +17,7 @@ body {
     text-align: center;
     background-color: white;
     padding: 20px;
+    border-radius: 10px;
 }
 .container {
     text-align: center;
@@ -39,4 +41,11 @@ body {
 }
 .login-btn:hover {
     background: #0056b3;
+}
+.register {
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
