@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     justify-content: center;
     align-items: center;
-    background-color: color-mix(in oklab, blue 75%, gray);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .header {
