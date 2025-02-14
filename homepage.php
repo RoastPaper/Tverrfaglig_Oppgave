@@ -1,29 +1,46 @@
 <?php
+// home.php – side for innloggede brukere
 session_start();
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
-	exit;
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+  header('Location: index.html');
+  exit;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hjemsiden</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warhammer 40k Quizs - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-	<body>
-		<nav class=>
-			<div>
-				<h1>Website Title</h1>
-				<a href="profile.php">Profile</a>
-				<a href="logout.php">Logout</a>
-			</div>
-		</nav>
-		<div class="content">
-			<h2>Home Page</h2>
-			<p>Welcome back, <?=htmlspecialchars($_SESSION['name'], ENT_QUOTES)?>!</p>
-		</div>
-	</body>
+<body>
+  <nav>
+    <div class="profileheader">
+      <h1>Warhammer 40k Quizs</h1>
+      <div class="right">
+        <a href="profile.php" class="login-btn">Profile</a>
+        <a href="logout.php" class="login-btn">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="header">
+      <logo>
+        <img src="Bilder/Warhammer-logo.png" alt="Warhammer Logo">
+      </logo>
+      <h1>Welcome to Warhammer 40k Quizs</h1>
+    </div>
+  </header>
+  <article>
+    <div class="explain">
+      <p>In this website you will find many different types of quizzes about Warhammer 40k.</p>
+	  <div>
+		<p>You have have logged in. Now can you make your own quizes let us begin </p>
+		<a href="quizmaking.html">Quiz</a>
+	</div>
+    </div>
+  </article>
+</body>
 </html>
