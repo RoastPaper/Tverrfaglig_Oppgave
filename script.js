@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() { //DOMContentLoaded la
     function addQuestion() { // La brukeren lage et spørsmål i nettsiden
       questionCount++;
       const questionsContainer = document.getElementById('questionsContainer');
-      L
+      
+      // Lage et element og putte det i HTML og putte det i variablen questionCount.
       const questionDiv = document.createElement('div');
-      questionDiv.className = 'question';
+      questionDiv.className = 'question'; 
       questionDiv.id = 'question-' + questionCount; 
       
+
       const questionLabel = document.createElement('label');
       questionLabel.innerText = 'Question ' + questionCount + ':';
       const questionInput = document.createElement('input');
