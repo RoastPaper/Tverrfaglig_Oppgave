@@ -30,15 +30,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       <logo>
         <img src="Bilder/Warhammer-logo.png" alt="Warhammer Logo">
       </logo>
-      <h1>Welcome to Warhammer 40k Quizs</h1>
+      <h1>Welcome to Warhammer 40k Quizes</h1>
     </div>
   </header>
   <article>
     <div class="explain">
-      <p>In this website you will find many different types of quizzes about Warhammer 40k.</p>
+      <p>In this website you will find many different types of quizes about Warhammer 40k.</p>
 	  <div>
 		<p>You have have logged in. Now can you make your own quizes let us begin </p>
-		<a href="quizmaking.html">Quiz</a>
+		<a href="quiz.php">Quiz</a>
 	</div>
     </div>
   </article>
