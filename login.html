@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="account">
         <div>
-            <h1>Logg inn</h1>
+            <h1>Login</h1>
         </div>
-    </header>
-    <div>
         <form action="login.php" method="post">
+            <label for="username">Username:</label> <br>
             <input type="text" name="username" placeholder="Username" id="username" required>
+            <br> <br>
+            <label for="password">Password</label>
+            <br>
             <input type="password" name="password" placeholder="Password" id="password" required>
+            <br> <br>
             <input type="submit" value="Login">
-    </div>
-    <div>
-        <a href="register.html">Do not have an account?</a>
+            <br>
+            <div>
+                <a href="register.html">Do not have an account?</a>
+            </div>
     </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #435165;
 }
 .header {
     text-align: center;
@@ -41,10 +42,39 @@ body {
 .login-btn:hover {
     background: #0056b3;
 }
-.register {
+.account {
     margin-top: 20px;
     text-align: center;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+}
+.profileheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.profileheader h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profileheader .right {
+    display: flex;
+    gap: 15px;
+}
+
+.profileheader .right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.profileheader .right a:hover {
+    color: #ddd;
 }
