@@ -10,9 +10,11 @@
     <div class="account">
         <h1>Warhammer 40k quiz</h1>
         <h1>Online Registration</h1>
+
+        <!-- Her bruker vi from til å kolbe til register.php og bruke method="post" for at brukeren sin informasjon klarer å komme seg til databasen -->
         <form action="register.php" method="post" autocomplete="off">
-            <label for="username">Username:</label> <br>
-            <input type="text" name="username" placeholder="Username" id="username" required> <br> <br>
+            <label for="username">Username:</label> <br> <!-- Her er det label som viser brukeren kan register -->
+            <input type="text" name="username" placeholder="Username" id="username" required> <br> <br> <!-- Her laget jeg input hvor brukeren putter in brukernavnet brukeren vil ha i kontoen. -->
 
             <label for="password">Password:</label> <br>
             <input type="password" name="password" placeholder="Password" id="password" required>
