@@ -1,5 +1,4 @@
 <?php
-// home.php – side for innloggede brukere
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -37,6 +36,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       <input type="submit" value="Create Quiz">
     </form>
   </div>
+  <!-- Her bruker jeg javascript -->
   <script src="script.js"></script>
 </body>
 </html>
