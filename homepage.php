@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) { // Passer
       <p>In this website you will find many different types of quizes about Warhammer 40k.</p>
 	  <div>
 		<p>You have have logged in. Now can you make your own quizes let us begin </p>
-		<a href="quiz.php">Quiz</a>
+		<a href="quiz.php" class="login-btn">Quiz</a>
 	</div>
     </div>
   </article>
