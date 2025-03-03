@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', function() { //DOMContentLoaded la
     let questionCount = 0; // Hvor mange spørsmåler det er nå.
 
     function addQuestion() { // La brukeren lage et spørsmål i nettsiden
-      questionCount++;
+      questionCount++; // Øk spørsmåltallet med 1 for hvert nye spørsmål.
       const questionsContainer = document.getElementById('questionsContainer');
       
       // Lage et element og putte det i HTML og putte det i variablen questionCount.
       const questionDiv = document.createElement('div');
       questionDiv.className = 'question'; 
+      // Setter en uniq id for spørsmålet basert på tellerverdien.
       questionDiv.id = 'question-' + questionCount; 
       
 
