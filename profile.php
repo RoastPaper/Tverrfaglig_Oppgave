@@ -21,7 +21,7 @@ $stmt = $con->prepare('SELECT password, email, username, date FROM accounts WHER
 // HEr finner det frem informasjon fra table fra toppen. Binder det sammen og finner det frem for at dek viser frem i HTML documentet.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email, $birthdate, $username); // $title skal også være i det, men fungerer grunn av ble ikke ferdig med quiz.php.
+$stmt->bind_result($password, $email, $username, $birthdate); // $title skal også være i det, men fungerer grunn av ble ikke ferdig med quiz.php.
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -43,7 +43,7 @@ $stmt->close();
       </div>
     </div>
   </nav>
-  <div>
+  <div class="explain">
     <h2>Profile Page</h2>
     <div>
       <p>Your account details are below:</p>
@@ -67,7 +67,7 @@ $stmt->close();
           <td><?=htmlspecialchars($birthdate, ENT_QUOTES)?></td>
         </tr>
         <tr>
-          <td>Your quizs:</td>
+          <td>Your quizs: Ikke Ferdig</td>
           <td><?=htmlspecialchars($name, ENT_QUOTES)?></td>
         </tr>
       </table>
