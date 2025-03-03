@@ -2,10 +2,12 @@
 // home.php – side for innloggede brukere
 session_start();
 
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-  header('Location: index.html');
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) { // Passer på at brukeren er logget inn, hvis ikke vil sende brukeren til index.html som trenger ikke være logget inn.
+  header('Location: index.html'); 
   exit;
 }
+
+// HTMl document
 ?>
 <!DOCTYPE html>
 <html lang="en">
