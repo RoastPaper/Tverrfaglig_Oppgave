@@ -1,30 +1,32 @@
-### Tverrfaglig_Oppgave
-Dette er en tverrfaglig oppgave av (Driftstøtte, Utvikling og brukerstøtte).
+### Tverrfaglig oppgave
+Dette er en tverrfaglig oppgave innen Driftstøtte, Utvikling og Brukerstøtte.
 
-### Warhammer 40K Quiz
+## Warhammer 40K Quiz
+Denne nettsiden lar brukeren lage sine egne quizer om Warhammer 40K. For å kunne opprette en quiz, må brukeren først registrere seg og opprette en konto der de kan lagre sin informasjon og de quizene de lager.
 
-I denne nettsiden vil brukeren kunne lage sinne egne quiz som handler om Warhammer 40k. I de må først lage en konto hvor de kan inneholder informasjon om dem og quiz de har laget. 
+## Programmeringsspråk
 
-For å kunne å lage et quiz må de ha en konto.
+Nettsiden er bygget med HTML, CSS, JavaScript og PHP.
 
-## Prgramspråk
+## Hvordan kjøre programmet
 
-Nettsiden er bygget opp av HTML, CSS, JavaScript og PHP.
-
-## Hvordan kjører programmet
-
-Du må lastet opp HTML, CSS, JavaScript og PHP. For å utføre programmet må du bruke en ip. Grunnen er at da vil ikke PHP fungere.
-Du må lage en database i terminalen for eksemepl ved å bruke mysql. Du kan finne informasjon i koden for oppprette en database og table med verdier. Før du kjører må du også koblet php til databasen.
+Filopplasting: Last opp HTML-, CSS-, JavaScript- og PHP-filene til en webserver.
+Serverkrav: PHP-kode kjøres kun på en server, så du må benytte en IP-adresse (eller domenenavn) som peker til en webserver.
+Database: Opprett en database (for eksempel ved hjelp av MySQL via terminalen). Se i koden for eksempler på hvordan du oppretter databasen og tabellene.
+Databasekobling: Før du kjører programmet, må du konfigurere PHP slik at den kobles til databasen.
 
 ## Kilde
 
-Å lage nettsiden har jeg brukt:
+I utviklingen av nettsiden har jeg brukt:
+
 ChatGPT
 W3Schools
 StackOverflow
 
 ## Sikkerhet
-Passordet til brukeren er hashed hvor det er kryptert for at ingen kan kunne spørre SQL-spørringer eller finne passordet til brukeren.
 
-## Copyright and policy
-Bildene brukt i nettsiden er ikke våre, men tilhører til Game Workshop. Alt informasjon du vil finne om Warhammer 40K er fra Game Workshop.
+Brukernes passord blir lagret på en sikker måte ved at de hashes. Dette sikrer at passordene ikke kan hentes ut selv om noen skulle få tilgang til databasen, og hindrer også SQL-injeksjoner.
+
+## Copyright og policy
+
+Alle bilder som brukes på nettsiden tilhører Game Workshop, og all informasjon om Warhammer 40K er hentet fra Game Workshop.
