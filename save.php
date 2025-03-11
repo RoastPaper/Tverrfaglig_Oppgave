@@ -29,4 +29,5 @@ $stmt->close();
 foreach($_POST as $key => $value) {
     // Ser etter for nøkler som "question1"
     if (preg_match('/^question(\d+)$/', $key, $matches)) {
+    }}
 ?>
