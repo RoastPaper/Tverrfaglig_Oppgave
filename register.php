@@ -18,15 +18,6 @@ if (mysqli_connect_errno()) { // Sjekker om noe feil med koblingen mellom mysql 
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-// Sjekker om brukeren har skrevt inn alle feltene rikitg.
-if (!isset($username, $password, $email, $day, $month, $year)) {
-    exit('Please complete the registration form!');
-}
-// Sjekker om det er tomt.
-if (empty($username) || empty($password) || empty($email) || empty($day) || empty($month) || empty($year)) {
-    exit('Please complete the registration form');
-}
-
 // Sjekker om emailen brukeren tastet er faktisk en email.
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit('Email is not valid!');
@@ -61,7 +52,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $stmt->bind_param('ssss', $username, $hashedPassword, $email, $birthdate);
             $stmt->execute();
-            echo 'You have successfully registered, you can now login!';
+            echo "You have successfully registered, you can now login! <a href='login.html'>Login</a>";
         } else {
             echo 'Could not prepare INSERT statement!';
         }
@@ -72,3 +63,4 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 }
 $con->close();
 ?>
+

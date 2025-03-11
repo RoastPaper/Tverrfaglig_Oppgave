@@ -22,16 +22,11 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-// Sjekker om brukeren har tastet inn begge feltene.
-if (!isset($username, $password) || empty($username) || empty($password)) {
-    exit('Please complete the login form!');
-}
-
 // Ko
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) { // Gi en SQL-spørring som henter kolonnene id og passord fra tabellen accounts fra brukernavn som samsvarer med verdien brukeren tastet inn.
     $stmt->bind_param('s', $username); // Binder variablen sammen s som angir at parameteren skal behandle som en streng
     $stmt->execute(); // Sender en SQL-spørring til databasen med bundet parametern.
-    $stmt->store_result(); // Med dette for vi ikke problemer sennere når vi gjør SQL-spørringer i dtabasen.
+    $stmt->store_result(); // Med dette for vi ikke problemer sennere når vi gjør SQL-spørringer i databasen.
     
 
     if ($stmt->num_rows > 0) { // Sjekker om brukernavnet finnes.
