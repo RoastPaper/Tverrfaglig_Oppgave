@@ -19,7 +19,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <body>
   <div class="quiz-form">
     <h1>Create Your Quiz</h1>
-    <form action="quiz.php" method="post" autocomplete="off">
+    <form action="save.php" method="post" autocomplete="off">
       <label for="title">Quiz Title:</label>
       <input type="text" id="title" name="title" required>
       <br><br>
