@@ -3,20 +3,22 @@ document.addEventListener('DOMContentLoaded', function() { //DOMContentLoaded la
 
     function addQuestion() { // La brukeren lage et spørsmål i nettsiden
       questionCount++; // Øk spørsmåltallet med 1 for hvert nye spørsmål.
+      const currentQuestionId = questionCount; //Beholde den oprrinlige Id for hvert spørsmål, for at Add answers skal bli plassert riktig spørsmål.
+
       const questionsContainer = document.getElementById('questionsContainer');
       
       // Lage et element og putte det i HTML og putte det i variablen questionCount.
       const questionDiv = document.createElement('div');
       questionDiv.className = 'question'; 
       // Setter en uniq id for spørsmålet basert på tellerverdien.
-      questionDiv.id = 'question-' + questionCount; 
+      questionDiv.id = 'question-' + currentQuestionId; 
       
 
       const questionLabel = document.createElement('label');
-      questionLabel.innerText = 'Question ' + questionCount + ':';
+      questionLabel.innerText = 'Question ' + currentQuestionId + ':';
       const questionInput = document.createElement('input');
       questionInput.type = 'text';
-      questionInput.name = 'question' + questionCount;
+      questionInput.name = 'question' + currentQuestionId;
       questionInput.required = true;
       
       questionDiv.appendChild(questionLabel);
@@ -25,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function() { //DOMContentLoaded la
       questionDiv.appendChild(document.createElement('br'));
       
       const answersContainer = document.createElement('div');
-      answersContainer.id = 'answersContainer-' + questionCount;
+      answersContainer.id = 'answersContainer-' + currentQuestionId;
       questionDiv.appendChild(answersContainer);
       
       const addAnswerButton = document.createElement('button');
       addAnswerButton.type = 'button';
       addAnswerButton.innerText = 'Add Answer';
       addAnswerButton.addEventListener('click', function() {
-        addAnswer(questionCount);
+        addAnswer(currentQuestionId);
       });
       questionDiv.appendChild(addAnswerButton);
       
